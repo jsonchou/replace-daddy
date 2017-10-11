@@ -5,7 +5,7 @@ function go(source, options) {
     if (options.search && options.replace) {
         options.search = new RegExp(options.search, options.flags || 'ig');
         source = source.replace(options.search, options.replace);
-        return thunk;
+        return source;
     }
     return source;
 }
