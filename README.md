@@ -5,7 +5,7 @@ Replace Everything you want...
 ## Install:
 
 ```bash
-$ npm i -D replace-dady
+$ npm i -D replace-daddy
 ```
 
 ## Usage:
@@ -17,7 +17,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js[x]$/,
-        loader: 'replace-dady',
+        loader: 'replace-daddy',
         query: {
           multiple: [
              { search: '__codeSplitType__', replace: 'whatever' },
