@@ -1,31 +1,30 @@
 {
-    "name": "replace-daddy",
-    "version": "2.0.1",
-    "description": "replace every thing",
-    "keywords": [
-        "webpack",
-        "loader",
-        "webpack-loader",
-        "replace",
-        "replace-daddy"
-    ],
-    "main": "index.js",
-    "dependencies": {
-        "loader-utils": "^1.1.0",
-        "lodash": "^4"
-    },
-    "devDependencies": {
-        "webpack": "1 || 2 || 3"
-    },
-    "peerDependencies": {
-        "webpack": "1 || 2 || 3"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jsonchou/replace-daddy.git"
-    },
-    "homepage": "https://github.com/jsonchou/replace-daddy",
-    "author": "jsonchou",
-    "license": "MIT",
-    "private": false
+  "name": "replace-daddy",
+  "version": "2.0.3",
+  "description": "replace everything in all text file type",
+  "keywords": [
+    "webpack",
+    "loader",
+    "webpack-loader",
+    "replace",
+    "replace-daddy"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "loader-utils": "^1.1.0"
+  },
+  "devDependencies": {
+    "webpack": "1 || 2 || 3"
+  },
+  "peerDependencies": {
+    "webpack": "1 || 2 || 3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsonchou/replace-daddy.git"
+  },
+  "homepage": "https://github.com/jsonchou/replace-daddy",
+  "author": "jsonchou",
+  "license": "MIT",
+  "private": false
 }
