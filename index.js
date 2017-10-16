@@ -4,8 +4,13 @@ function go(source, sub, resourcePath) {
 
     //通过载入外部配置文件方式replace
     if (sub.config && Object.keys(sub.config).length) {
-        let { root = '', key = '', alias = '' } = sub; //make root + key unique to match loaded files
+        let { root = '', key = '', alias = '__daddy__' } = sub; //make root + key unique to match loaded files
         let __daddy__ = sub.config[alias];
+
+        if (!__daddy__) {
+            throw new Error('you have no alias [__daddy__] in your const module files');
+            return;
+        }
 
         __daddy__.forEach((item, index) => {
             let { search, replace, regexMode = 'ig' } = item;
@@ -49,20 +54,14 @@ function go(source, sub, resourcePath) {
 
 module.exports = function(stream, map) {
     this.cacheable();
-
     let opt = loaderUtils.getOptions(this);
-
     let { multiple } = opt;
-
     let resPath = this.resourcePath;
-
     // console.log('resPath',resPath);
-
     if (!resPath) {
         //console.log('can not load your specified file');
         return;
     }
-
     multiple.forEach(function(sub) {
         sub && (stream = go(stream, sub, resPath))
     });
