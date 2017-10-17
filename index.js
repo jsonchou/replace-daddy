@@ -68,3 +68,4 @@ module.exports = function(stream, map) {
 
     this.callback(null, stream, map);
 };
+
