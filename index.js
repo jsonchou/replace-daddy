@@ -2,7 +2,7 @@ const loaderUtils = require('loader-utils');
 
 function go(source, sub, resourcePath) {
 
-    //通过载入外部配置文件方式replace
+    //const way to replace
     if (sub.config && Object.keys(sub.config).length) {
         let { root = '', key = '', alias = '__daddy__' } = sub; //make root + key unique to match loaded files
         let __daddy__ = sub.config[alias];
@@ -32,7 +32,7 @@ function go(source, sub, resourcePath) {
         })
         return source;
     } else {
-        //通过webpack明文方式replace
+        //default way to replace
         let { search, replace, regexMode = 'ig', root = '', key = '' } = sub
 
         if (typeof replace === 'boolean') {
