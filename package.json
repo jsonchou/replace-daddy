@@ -1,7 +1,7 @@
 {
   "name": "replace-daddy",
   "version": "2.0.8",
-  "description": "replace everything in all text file type",
+  "description": "Replace everything in all plain text file",
   "keywords": [
     "webpack",
     "loader",
