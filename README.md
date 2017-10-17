@@ -15,8 +15,6 @@ $ npm i -D replace-daddy
 ```javascript
 
 # project
-
-
 const assetsPath = '__debug__'==='true' ? `http://__localIP__:__localPORT__/foo` : `//cdn.site.com/assets/bar`;
 import routes from './router/__routerMode__'
 /* webpackChunkName: "__spaDirBuild__/Index" */
@@ -46,7 +44,7 @@ module.exports = {
 }
 ```
 
-### Dynamic by local file
+### Dynamic by local config file
 
 ```javascript
 
