@@ -30,11 +30,11 @@ module.exports = {
         loader: 'replace-daddy',
         query: {
           multiple: [
-            { search: '__debug__', replace: myConfig.debug || true,  } //warning: use bool string in condition syntax 
-            { search: '__localIP__', replace: getIPAddress(),  }
-            { search: '__localPORT__', replace: getHostPORT(), }
-            { search: '__imagesDir__', replace: 'images/bar/foo', }
-            { search: '__spaDirBuild__', replace:'assets/scripts'}
+            { search: '__debug__', replace: myConfig.debug || true,  }, //warning: use bool string in condition syntax 
+            { search: '__localIP__', replace: getIPAddress(),  },
+            { search: '__localPORT__', replace: getHostPORT(), },
+            { search: '__imagesDir__', replace: 'images/bar/foo', },
+            { search: '__spaDirBuild__', replace:'assets/scripts'},
             { search: '__routerMode__', replace: 'router-split', regexMode:'ig' },
           ]
         }
@@ -62,7 +62,7 @@ module.exports = {
         loader: 'replace-daddy',
         query: {
           multiple: [
-             { file: 'api/CONSTS.js'), alias: '__daddy__' },
+             { file: 'api/CONSTS.js', alias: '__daddy__' },
           ]
         }
       }
@@ -107,7 +107,7 @@ module.exports = {
         query: {
             multiple: [
                 { search: '__routerMode__', replace: 'whatever', regexMode: 'ig' },
-                { root: 'vue', name: 'foldername' file: 'api/CONSTS.js'), alias: '__daddy__'},
+                { root: 'vue', name: 'foldername', file: 'api/CONSTS.js', alias: '__daddy__'},
             ]
           }
       }
