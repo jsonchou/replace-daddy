@@ -62,7 +62,7 @@ module.exports = {
         loader: 'replace-daddy',
         query: {
           multiple: [
-             { file: 'api/CONSTS.js', alias: '__daddy__' },
+             { file: path.join(__dirname, '..', 'api/config.js'), alias: '__daddy__' },
           ]
         }
       }

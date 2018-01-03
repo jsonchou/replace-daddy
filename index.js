@@ -2,6 +2,10 @@ const loaderUtils = require('loader-utils');
 
 function go(source, sub, resourcePath) {
 
+    if (sub.file) {
+        sub.config = require(sub.file);
+    }
+
     //const way to replace
     if (sub.config && Object.keys(sub.config).length) {
         let {
