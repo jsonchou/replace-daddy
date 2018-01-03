@@ -74,11 +74,14 @@ module.exports = {
 
 module.exports = {
     debug: 'dev',//there can be bool, number whatever
+    prefix:'ax',
     router: {
         split: true, 
         mode: 'hash', 
     },
     __daddy__: [
+        { search: '__prefix__', replace:'prefix', regexMode: 'ig' },
+        { search: '__debug__', replace:'debug', regexMode: 'ig' },
         { search: "__routerMode__", replace: { "router.split==true": "router-split", "router.split==false": "router-common" }, regexMode: "ig" },
         { search: "__bootPath__", replace: { "debug=='dev'": "config.dev.js", "debug=='pro'": "config.pro.js" } },
     ]
@@ -107,7 +110,7 @@ module.exports = {
         query: {
             multiple: [
                 { search: '__routerMode__', replace: 'whatever', regexMode: 'ig' },
-                { root: 'vue', name: 'foldername', file: 'api/CONSTS.js', alias: '__daddy__'},
+                { root: 'vue', name: 'spafoldername', file: 'api/CONSTS.js', alias: '__daddy__'},
             ]
           }
       }
