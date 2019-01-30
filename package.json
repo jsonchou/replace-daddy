@@ -1,6 +1,6 @@
 {
   "name": "replace-daddy",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Replace everything in all plain text file",
   "keywords": [
     "webpack",
@@ -12,12 +12,6 @@
   "main": "index.js",
   "dependencies": {
     "loader-utils": "^1.1.0"
-  },
-  "devDependencies": {
-    "webpack": "1 || 2 || 3"
-  },
-  "peerDependencies": {
-    "webpack": "1 || 2 || 3"
   },
   "repository": {
     "type": "git",
